@@ -133,3 +133,18 @@ document.querySelectorAll('.dropdown-container').forEach(container => {
   });
 
 
+document.querySelectorAll('.learn-more-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const card = this.closest('.border');
+      const content = card.querySelector('.event-content');
+      
+      const isOpen = content.classList.contains('max-h-[1000px]');
+
+      content.classList.toggle('max-h-0', isOpen);
+      content.classList.toggle('max-h-[1000px]', !isOpen);
+
+      this.textContent = isOpen ? 'Learn more' : 'Show less';
+    });
+  });
