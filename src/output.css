@@ -675,6 +675,12 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-\[28px\] {
+    font-size: 28px;
+  }
+  .text-\[37px\] {
+    font-size: 37px;
+  }
   .font-\[700\] {
     --tw-font-weight: 700;
     font-weight: 700;
