@@ -3,6 +3,12 @@
 html{
   scroll-behavior: smooth;
 }
+#24hours_residential_services,
+#supportive_living_services,
+#clinical_support_services,
+#home_community_services,
+#community_outreach_services,
+#aimed_to_independence,
 #about-aimed,
 #word-from-ceo,
 #volunteer  {
