@@ -121,6 +121,34 @@ Place That Feels Like">
 div[style*="text-align: right"] {
   display: none !important;
 }
+
+/* Loader Styles */
+#bamboohr-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 100%;
+}
+.bamboohr-spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #f5a623;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: bamboohr-spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+@keyframes bamboohr-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.bamboohr-loader-text {
+  font-family: "brandon-grotesque", sans-serif;
+  color: #333;
+  font-size: 1.1rem;
+}
 </style>
 
 
@@ -247,6 +275,10 @@ div[style*="text-align: right"] {
     <div id="BambooHR"
      data-domain="aimedpgh.bamboohr.com"
      data-version="1.0.0">
+    <div id="bamboohr-loader">
+      <div class="bamboohr-spinner"></div>
+      <div class="bamboohr-loader-text">Loading jobs...</div>
+    </div>
 </div>
 </section>
 
@@ -409,11 +441,28 @@ York, PA  17313
 
  
 
-<script src="https://aimedpgh.bamboohr.com/js/embed.js" async defer></script>
+<script src="https://aimedpgh.bamboohr.com/js/embed.js" async defer onload="hideBamboohrLoaderWhenJobsLoaded()"></script>
  <script src="assets/script.js" ></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Hide loader when BambooHR jobs are loaded
+  function hideBamboohrLoaderWhenJobsLoaded() {
+    // Observe for jobs list
+    const observer = new MutationObserver(() => {
+      const jobsList = document.querySelector('#BambooHR .BambooHR-ATS-Jobs-List');
+      const loader = document.getElementById('bamboohr-loader');
+      if (jobsList && loader) {
+        loader.style.display = 'none';
+        observer.disconnect();
+      }
+    });
+    const bamboohr = document.getElementById('BambooHR');
+    if (bamboohr) {
+      observer.observe(bamboohr, { childList: true, subtree: true });
+    }
+  }
+</script>
 </body>
 </html>
