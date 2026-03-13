@@ -123,7 +123,7 @@ div[style*="text-align: right"] {
 }
 
 /* Loader Styles */
-#bamboohr-loader {
+/* #bamboohr-loader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +148,7 @@ div[style*="text-align: right"] {
   font-family: "brandon-grotesque", sans-serif;
   color: #333;
   font-size: 1.1rem;
-}
+} */
 </style>
 
 
@@ -275,10 +275,7 @@ div[style*="text-align: right"] {
     <div id="BambooHR"
      data-domain="aimedpgh.bamboohr.com"
      data-version="1.0.0">
-    <div id="bamboohr-loader">
-      <div class="bamboohr-spinner"></div>
-      <div class="bamboohr-loader-text">Loading jobs...</div>
-    </div>
+   
 </div>
 </section>
 
@@ -441,45 +438,11 @@ York, PA  17313
 
  
 
-<script src="https://aimedpgh.bamboohr.com/js/embed.js" async defer onload="hideBamboohrLoaderWhenJobsLoaded()"></script>
+<script src="https://aimedpgh.bamboohr.com/js/embed.js"></script>
  <script src="assets/script.js" ></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
-
-  // Hide loader when BambooHR jobs are loaded
-  function hideBamboohrLoaderWhenJobsLoaded() {
-
-  const loader = document.getElementById("bamboohr-loader");
-  const bamboohr = document.getElementById("BambooHR");
-
-  if (!loader || !bamboohr) return;
-
-  const observer = new MutationObserver(() => {
-
-    const jobsList = bamboohr.querySelector(".BambooHR-ATS-Jobs-List");
-    const jobItems = bamboohr.querySelectorAll(".BambooHR-ATS-Jobs-Item");
-
-    // Hide loader only when real jobs exist
-    if (jobsList && jobItems.length > 0) {
-      loader.style.display = "none";
-      observer.disconnect();
-    }
-
-  });
-
-  observer.observe(bamboohr, {
-    childList: true,
-    subtree: true
-  });
-  
-}
-
-setTimeout(() => {
-  const loader = document.getElementById("bamboohr-loader");
-  if (loader) loader.style.display = "none";
-}, 4000);
-
 </script>
 </body>
 </html>
