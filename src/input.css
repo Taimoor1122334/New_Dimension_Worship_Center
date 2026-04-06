@@ -99,6 +99,10 @@ body {
         font-size:clamp(1.375rem, 0.9vw + 1rem, 1.75rem);
         /* @apply text-[28px] */
     }
+    .footer-p{
+      font-size: clamp(1rem, 1.2vw + 0.1rem, 1.125rem);
+        /* @apply text-[18px] */
+    }
     .large-p-heading {
       @apply font-[700]  text-[#000000]
     }
@@ -230,8 +234,8 @@ nav .nav-link:focus-visible::after {
 .footer-link{
      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 500;
-  font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
-    @apply  underline hover:text-[#FBAA06]
+ 
+    @apply  underline hover:text-[#78580E] 
 }
 
 @media (max-width:1260px){
