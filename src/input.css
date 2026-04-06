@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -17,20 +33,20 @@ html{
 
 /* Regular */
 body {
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 500;
   overflow-x: hidden;
 }
 
 /* Medium */
 .medium-text {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 500;
 }
 
 /* Bold */
 .bold-text {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -45,8 +61,8 @@ body {
         /* @apply text-[56px]; */
     }
     h2{
-        font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
+        font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 700;
   font-size: clamp(1.5rem, 2.02vw + 1rem, 2.813rem);
         /* @apply text-[45px] */
     }
@@ -54,17 +70,25 @@ body {
         font-size: clamp(1.375rem, 1.46vw + 1rem, 2.313rem);
         /* @apply text-[37px] */
     }
+    .small-h3{
+      font-size: clamp(1.563rem, 2.1vw + 0.1rem, 1.875rem);
+        /* @apply text-[30px] */
+    }
     h4{
-        font-size:clamp(1rem, 0.277vw + 1rem, 1.25rem);
-          @apply /*text-[20px]*/ text-[#DF6600];
-           font-family: "brandon-grotesque", sans-serif;
-         font-weight: 700;
+        font-size:clamp(1.25rem, 1.6vw + 0.1rem, 1.5rem);
+          /*text-[24px]*/ 
+           font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+         font-weight: 700; 
     }
     h5{
-         font-family: "brandon-grotesque", sans-serif;
+         font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
          font-weight: 700;
         @apply text-[15px] text-white
         
+    }
+    .small-p{
+      font-size: clamp(1rem, 1.4vw + 0.1rem, 1.25rem);
+        /* @apply text-[20px] */
     }
     p{
         font-size: clamp(1rem, 1.3vw + 0.6rem, 1.375rem);
@@ -85,18 +109,18 @@ body {
         @apply max-w-[53]
     }
     .btn{
-         font-family: "brandon-grotesque", sans-serif;
+         font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
-        @apply text-[13px] md:text-[15px]  bg-[#FBAA06] py-3 px-6 rounded-lg text-white hover:bg-[#DF6600]
+        @apply text-[13px] md:text-[15px]  bg-[#78580E] py-4 px-7 rounded-full text-white hover:bg-[#6c4f0b]
     }
-    .white-btn{
-         font-family: "brandon-grotesque", sans-serif;
+    .transparent-btn{
+         font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
-        @apply text-[13px] md:text-[15px] bg-white hover:bg-[#e59a05] hover:text-white py-3 px-6 inline-block  rounded-lg;
-    }
+        @apply text-[13px] md:text-[15px] py-4 px-7 rounded-full text-white hover:text-[#78580E]
+   }
     .large-btn{
       
-         font-family: "brandon-grotesque", sans-serif;
+         font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
        @apply text-[18px] md:text-[22px] lg:text-[24px] bg-[#FBAA06] py-2 px-12 rounded-lg text-white hover:bg-[#DF6600]
     
@@ -111,8 +135,8 @@ body {
     @apply max-w-[26px]
 }
 nav .nav-link{
-     font-weight: 700;
-    @apply uppercase
+     font-weight: 500;
+    @apply uppercase text-[16px]
 }
 
 @media (max-width:1270px){
@@ -129,6 +153,8 @@ nav .nav-link{
 
 #mainNavbar.fixed {
   animation: fadeInDown 0.8s ease-out; /* optional fade-in */
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(10px);
 }
 
 @keyframes fadeInDown {
@@ -147,32 +173,12 @@ nav .nav-link{
 }
 
 
-nav .nav-link {
-  position: relative;
-}
 
-#active::after {
-  
-  position: absolute;
-  left: 0;
-  bottom: -37px;
-  width: 100%;
-  height: 4px; 
-  background-color: #FBAA06; 
+#active {
+  opacity: 1 ;
   
 }
 
-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -37px; /* distance from text */
-  width: 0%;
-  height: 4px; /* thickness of the bar */
-  background-color: #FBAA06; 
-  transition: width 0.3s ease;
-  will-change: width;
-}
 
 /* Hover and keyboard-focus (accessible) state */
 nav .nav-link:hover::after,
@@ -213,7 +219,7 @@ nav .nav-link:focus-visible::after {
 }
 
 .footer-link{
-     font-family: "brandon-grotesque", sans-serif;
+     font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 500;
   font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
     @apply  underline hover:text-[#FBAA06]

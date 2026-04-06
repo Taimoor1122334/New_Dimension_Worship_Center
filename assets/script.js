@@ -107,44 +107,47 @@ document.querySelectorAll('.dropdown-container').forEach(container => {
 });
 
 // -------video play---------------
-   const video = document.getElementById("customVideo");
+  const video = document.getElementById("customVideo");
   const playBtn = document.getElementById("playBtn");
   const thumbnail = document.getElementById("videoThumbnail");
 
-  let hasPlayedOnce = false;
+  if (video && playBtn) {
+    let hasPlayedOnce = false;
 
-  // First play
-  playBtn.addEventListener("click", () => {
-    video.play();
-    playBtn.classList.add("hidden");
+    // First play
+    playBtn.addEventListener("click", () => {
+      video.play();
+      playBtn.classList.add("hidden");
 
-    if (!hasPlayedOnce) {
-      thumbnail.classList.add("hidden");
-      hasPlayedOnce = true;
-    }
-  });
+      if (!hasPlayedOnce && thumbnail) {
+        thumbnail.classList.add("hidden");
+        hasPlayedOnce = true;
+      }
+    });
 
-  // Pause video (thumbnail will NOT return)
-  video.addEventListener("click", () => {
-    if (!video.paused) {
-      video.pause();
-      playBtn.classList.remove("hidden");
-    }
-  });
+    // Pause video (thumbnail will NOT return)
+    video.addEventListener("click", () => {
+      if (!video.paused) {
+        video.pause();
+        playBtn.classList.remove("hidden");
+      }
+    });
+  }
 
 
 document.querySelectorAll('.learn-more-btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const card = this.closest('.border');
-      const content = card.querySelector('.event-content');
-      
-      const isOpen = content.classList.contains('max-h-[1000px]');
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
 
-      content.classList.toggle('max-h-0', isOpen);
-      content.classList.toggle('max-h-[1000px]', !isOpen);
+    const card = this.closest('.border');
+    const content = card?.querySelector('.event-content');
+    if (!content) return;
 
-      this.textContent = isOpen ? 'Learn more' : 'Show less';
-    });
+    const isOpen = content.classList.contains('max-h-[1000px]');
+
+    content.classList.toggle('max-h-0', isOpen);
+    content.classList.toggle('max-h-[1000px]', !isOpen);
+
+    this.textContent = isOpen ? 'Learn more' : 'Show less';
   });
+});

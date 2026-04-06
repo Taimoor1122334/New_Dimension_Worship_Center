@@ -5,566 +5,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" Making Possibilities Happen in a
 Place That Feels Like">
-    <link rel="stylesheet" href="https://use.typekit.net/njx8dso.css">
 <link rel="stylesheet" href="src/output.css">
 <link rel="icon" href="assets/images/Image 1.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Aimed</title>
+    <title>New Dimension Worship Center</title>
 </head>
 <body>
+  <div class="min-h-screen bg-white text-black">
+    <!-- Hero + Navbar (matches Home.png layout) -->
+    <header class="relative overflow-hidden rounded-3xl bg-black m-5 min-h-[100vh]">
+      <div class="absolute inset-0">
+        <img
+          src="assets/images/pedro-lima-HtwsbbClBOs-unsplash(Hero-image).png"
+          alt="Hero background"
+          class="h-full w-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-black/55"></div>
+      </div>
 
-    <section class="bg-[#DF6600]">
-        <div class="max-w-[1440px] mx-auto sm:px-6 lg:px-12 py-4 flex flex-wrap items-center justify-center md:justify-around gap-4">
+      <nav id="mainNavbar" class="relative z-20">
+        <div class="mx-auto flex max-w-[1320px] items-center justify-between px-5 py-5">
+          <a href="index.html" class="flex items-center gap-2">
+            <img
+              src="assets/images/Transparent-Logo_logo.png"
+              alt="NDWC logo"
+              class="h-15 w-auto"
+            />
+          </a>
 
-          <div class="flex items-center space-x-3 w-full sm:w-auto justify-center md:justify-start">
-            <img src="assets/images/location icon.svg" alt="location icon" class="loc-icon">
-            <h5 class="text-sm md:text-base">3301 McCrady Road, Pittsburgh, PA 15235</h5>
+          <!-- Desktop nav -->
+          <div class="hidden items-center gap-15 text-[16px] font-medium text-white lg:flex">
+            <a href="index.html" class="opacity-90 hover:opacity-100 nav-link active">Home</a>
+
+            <div class="relative dropdown-container">
+              <a href="#" class="flex items-center nav-link gap-2 opacity-90 hover:opacity-100">
+                About
+               
+              </a>
+              <div class="dropdown-menu absolute left-0 top-full mt-3 hidden w-56 rounded-xl bg-white py-2 shadow-2xl ring-1 ring-white/10">
+                <a href="#" class="block px-4 py-2 text-black hover:bg-amber-100">About NDWC</a>
+                <a href="#" class="block px-4 py-2 text-black hover:bg-amber-100">Our Founder</a>
+                <a href="#" class="block px-4 py-2 text-black hover:bg-amber-100">Continuing the Vision</a>
+                <a href="#" class="block px-4 py-2 text-black hover:bg-amber-100">Our Senior Pastor</a>
+                <a href="#" class="block px-4 py-2 text-black hover:bg-amber-100">Ministerial Staff</a>
+                <a href="#" class="block px-4 py-2 text-black hover:bg-amber-100">What We Believe</a>
+              </div>
+            </div>
+
+            <a href="#" class="opacity-90 hover:opacity-100 nav-link">Ministries</a>
+            <a href="#" class="opacity-90 hover:opacity-100 nav-link">Media</a>
+            <a href="#" class="opacity-90 hover:opacity-100 nav-link">Contact</a>
+            <a href="#" class="opacity-90 hover:opacity-100 nav-link">Give</a>
           </div>
 
-          <div class="flex items-center space-x-3 w-full sm:w-auto justify-center md:justify-start">
-            <img src="assets/images/phone icon.svg" alt="phone icon" class="phone-icon">
-            <h5 class="text-sm md:text-base">412-704-5067</h5>
+          <!-- Mobile toggle -->
+          <div class="lg:hidden">
+            <button onclick="toggleMenu()" id="menuToggleBtn" aria-label="Open menu">
+              <svg id="menuIcon" class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menuIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
-
-          <div class="flex items-center space-x-3 w-full sm:w-auto justify-center md:justify-start">
-            <img src="assets/images/location icon.svg" alt="location icon" class="loc-icon">
-            <h5 class="text-sm md:text-base">2793 S. Queen Street, York, PA  17313</h5>
-          </div>
-
-          <div class="flex items-center space-x-3 w-full sm:w-auto justify-center md:justify-start">
-            <img src="assets/images/phone icon.svg" alt="phone icon" class="phone-icon">
-            <h5 class="text-sm md:text-base">717-356-2410</h5>
-          </div>
-
-          <div class="flex items-center space-x-3 w-full sm:w-auto justify-center md:justify-start">
-            <img src="assets/images/hours.svg" alt="clock icon" class="clock-icon">
-            <h5 class="text-sm md:text-base">Monday - Friday: 9am - 5pm</h5>
-          </div>
-
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-black/90 px-5 py-5">
+          <nav class="flex flex-col gap-4 text-sm font-bold uppercase text-white">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="#" class="mobile-link">About</a>
+            <a href="#" class="mobile-link">Ministries</a>
+            <a href="#" class="mobile-link">Media</a>
+            <a href="#" class="mobile-link">Contact</a>
+            <a href="#" class="mobile-link">Give</a>
+          </nav>
+        </div>
+      </nav>
+
+      <div class="relative z-10 mx-auto max-w-[1320px] px-5 pb-10 pt-[33vh] md:pt-[43vh] lg:pt-[53vh]">
+        <div class="flex  flex-col md:flex-row justify-between  gap-10 ">
+          <div class=" text-white max-w-[100%] md:max-w-[65%]">
+            <h3 >Welcome to New Dimension Worship Center</h3>
+            <p class="small-p">
+              Equipping God's People, Advancing God's Kingdom. Empowered to Move from
+              Religion to a Life-Transforming Relationship with Christ.
+            </p>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-4 items-center max-w-[100%] md:max-w-[35%] ">
+            <a href="#" class="btn">About NDWC</a>
+            <a href="#" class="transparent-btn">Service Times</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome -->
+    <section class="mx-auto max-w-[1320px] px-5 py-14 ">
+      <h2 class="large-heading text-center">Welcome!</h2>
+      <div class="mx-auto mt-6 space-y-5  leading-6 ">
+        <p>
+          We’re so glad you’re here. At NDWC, our mission is simple yet powerful: to equip, empower, and encourage God’s
+          people for the work of serving and building up the Body of Christ. Together, we are advancing the Kingdom of God—
+          one person, one marriage, and one family at a time.
+        </p>
+        <p>
+          Our passion is to lead believers beyond religion into a genuine, life-transforming relationship with Jesus Christ.
+          Whether you are new to faith, rediscovering your walk with God, or looking for a church family, you’ll find a
+          welcoming community ready to grow with you.
+        </p>
+        <p>
+          Join us as we worship, serve, and advance the Kingdom of God—one person, one marriage, and one family at a time.
+        </p>
+      </div>
     </section>
 
+    <!-- Join Us This Sunday -->
+    <section class="mx-auto max-w-[1320px] px-5 pb-16 text-center">
+      <h2 class="large-heading text-center">Join Us This Sunday</h2>
+      <p class=" mt-3 small-p ">
+      Join us as we worship, serve, and advance the Kingdom of God—one person, one marriage, and one family at a time. </p>
 
-
-    <nav id="mainNavbar" class="bg-white z-20 transition-all  duration-1000 ease-in-out  px-3 py-2 md:py-5 md:px-0">
-    <div class="max-w-[1440px] mx-auto sm:px-6 lg:px-12 flex items-center justify-between ">
-      
-      <!-- Logo Section -->
-      <div class="nav-logo flex items-center space-x-1  h-auto  ">
-         <a href="index.html">
-           <div class="sr-only" >Aimed</div>
-        <img src="assets/images/Image 1.svg" alt="website Logo" class="w-full h-full">
-        </a>
-      </div>
-  
-      <!-- Desktop Navigation -->
-      <div class="hidden desktop lg:flex w-4xl items-center mx-2 justify-around px-12  space-x-6" >
-        <a href="#" class="nav-link " id="active" data-link="home">Home</a>
-        
-        <div class="relative dropdown-container">
-            <a href="about.html" class="nav-link  " data-link="about">About</a>
-            
-            <div class="dropdown-menu absolute left-0 transform  top-full mt-1 hidden bg-white border-2 border-black shadow-lg z-50  min-w-max">
-                <div class="py-1">
-                    <a href="about.html#about-aimed" class="block px-4 py-2 text-black hover:bg-gray-100 whitespace-nowrap">About AIMED</a>
-                    <a href="about.html#word-from-ceo" class="block px-4 py-2 text-black hover:bg-gray-100 whitespace-nowrap">A word from our CEO</a>
-                </div>
-            </div>
+      <div class="mt-8 grid grid-cols-1 gap-6 md:gap-10 lg:gap-16 md:grid-cols-2">
+        <div class="rounded-[14px] bg-[#e9e9e9] px-6 py-10 md:py-14 text-center">
+          <img src="assets/images/In_person.png" alt="In person" class="mx-auto h-10 w-10" />
+          <h4 class="mt-3 ">In Person</h4>
+          <p class="mt-4 small-p">
+            7450 New Technology Way, Suite C,<br />
+            Frederick, Maryland 21703
+          </p>
+          <p class="mt-4 small-p">Time: 12:00 pm – 2:00 pm</p>
         </div>
 
-        <a href="services.html" class="nav-link  " data-link="leadership">Services</a>
-         <a href="jobs.html" class="nav-link  " data-link="about">Jobs</a>
-        <a href="contact-us.html" class="nav-link  " data-link="give">Contact</a>
-    </div>
-
-
-  
-      <!-- btn -->
-      <div class="hidden lg:flex items-center" >
-     <a href="support.html"  class="btn"> Donate Now</a>
-
+        <div class="rounded-[14px] bg-[#e9e9e9] px-6 py-10 md:py-14 text-center">
+          <img src="assets/images/Online.png" alt="Online" class="mx-auto h-10 w-10" />
+          <h4 class="mt-3 ">Online</h4>
+          <p class="mt-4 small-p">
+            Streaming via Facebook Live<br />
+            New Dimension Worship Center
+          </p>
+          <p class="mt-4 small-p"><span class="font-bold">Time:</span> 12:00 pm – 2:00 pm</p>
+        </div>
       </div>
-  
-      <!-- Hamburger Menu -->
-      <div class="lg:hidden">
-        <button onclick="toggleMenu()" id="menuToggleBtn">
-          <!-- Default icon -->
-          <svg id="menuIcon" class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="menuIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="lg:hidden hidden px-4 py-4 border-t">
-      <nav class="flex flex-col space-y-4  uppercase">
-        <a href="index.html" class="mobile-link ">Home</a>
+    </section>
 
-        <!-- Mobile Dropdown: About -->
-        <button type="button" class="uppercase flex items-center justify-between w-full text-left  mobile-dropdown-toggle">
-          <a href="about.html" >About</a>
-          <svg class="w-5 h-5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-        <div class="mobile-submenu hidden max-h-0 overflow-hidden transition-all duration-300">
-          <div class="pl-4 flex flex-col space-y-3 ">
-            <a href="about.html#about-aimed" class="mobile-link ">About AIMED</a>
-            <a href="about.html#word-from-ceo" class="mobile-link ">A word from our CEO</a>
+    <!-- Who We Are -->
+    <section class="mx-auto max-w-[1320px] px-5 pb-16">
+      <div class="rounded-3xl bg-black px-6 py-10 text-center text-white md:px-14 md:py-14">
+        <h2 class="text-white large-heading">Who We Are</h2>
+        <p class="mx-auto mt-5 max-w-full md:max-w-[80%] small-p leading-6 text-white">
+          We are a family-centered, encouraging, and loving community of believers committed to helping people experience a
+          life-transforming relationship with Christ. Our mission is rooted in advancing the Kingdom of God through
+          authentic relationship, spirit-led worship, and equipping disciples to serve in every sphere of life.
+        </p>
+        <div class="mt-10">
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="mx-auto max-w-[1320px] pt-10 px-5 pb-20 text-center">
+      <h2 class="large-heading">Upcoming Events</h2>
+
+      <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div class="overflow-hidden rounded-2xl bg-black min-h-80 flex items-end justify-center ">
+          
+          <div class="bg-white py-5 rounded-2xl border border-black w-full">
+            <h3 class="small-h3">Event 1</h3>
+          </div>
+        </div>
+         <div class="overflow-hidden rounded-2xl bg-black min-h-80 flex items-end justify-center ">
+          
+          <div class="bg-white py-5 rounded-2xl border border-black w-full">
+            <h3 class="small-h3">Event 2</h3>
+          </div>
+        </div>
+         <div class="overflow-hidden rounded-2xl bg-black min-h-80 flex items-end justify-center ">
+          
+          <div class="bg-white py-5 rounded-2xl border border-black w-full">
+            <h3 class="small-h3">Event 3</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+      <div class="mx-auto max-w-[1320px] px-5 py-12">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-4">
+          <div class="md:col-span-1">
+            <img src="assets/images/Transparent-Logo_logo.png" alt="Logo" class="h-12 w-auto" />
+            <p class="mt-4 text-[11px] leading-5 text-white/70">
+              At NDWC, we believe in learning, equipping, and empowering disciples through the teaching of God’s Word and
+              the operation of the Holy Spirit. We are passionate about seeing lives changed by the Gospel and building
+              strong families that advance the Kingdom together.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[12px] font-bold">QUICK LINKS</p>
+            <ul class="mt-4 space-y-2 text-[11px] text-white/80">
+              <li><a class="hover:text-white" href="#">Home</a></li>
+              <li><a class="hover:text-white" href="#">About</a></li>
+              <li><a class="hover:text-white" href="#">Ministries</a></li>
+              <li><a class="hover:text-white" href="#">Media</a></li>
+              <li><a class="hover:text-white" href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-[12px] font-bold">WHO WE ARE</p>
+            <ul class="mt-4 space-y-2 text-[11px] text-white/80">
+              <li><a class="hover:text-white" href="#">About NDWC</a></li>
+              <li><a class="hover:text-white" href="#">Our Founder</a></li>
+              <li><a class="hover:text-white" href="#">Continuing the Vision</a></li>
+              <li><a class="hover:text-white" href="#">Our Senior Pastor</a></li>
+              <li><a class="hover:text-white" href="#">Ministerial Staff</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-[12px] font-bold">CONTACT US</p>
+            <div class="mt-4 space-y-3 text-[11px] text-white/80">
+              <p>
+                7450 New Technology Way, Suite C,<br />
+                Frederick, Maryland 21703
+              </p>
+              <p><span class="font-bold text-white">Tel:</span> 302-302-2277</p>
+            </div>
           </div>
         </div>
 
-        <a href="services.html" class="mobile-link ">Services</a>
-         <a href="jobs.html" class="mobile-link">Jobs</a>
-        <a href="contact-us.html" class="mobile-link ">Contact</a>
-         <!-- btn -->
-      <div class=" lg:flex items-center mt-2  ">
-     <a href="support.html" class="btn"> Donate Now</a>
-
-      </div>
-      </nav>
-    </div>
-  </nav>
-
- <!-- ------------hero-section--------------------->
-
- <section >
-  <div class="w-full py-10 md:py-20 lg:py-35 object-top-right  relative flex justify-center items-center overflow-hidden"
- >
-  <!-- style="background-image: url('assets/images/hero-image.png'); background-size: cover; background-position: center;" -->
-<div class="absolute inset-0 ">
-  <img src="assets/images/hero-image.png" alt="Aimed hero image"  class="w-full h-full object-cover cushycms" title="Hero Image">
-</div>
-
-
-    
-      <div class=" absolute inset-0 bg-black/50 "></div>
-
-      
-        <div class="z-10 flex flex-col justify-center items-center text-center    max-w-[1440px] lg:mx-auto py-20        "
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-        >
-          <h1 class="max-w-3xl text-white cushycms" title="Hero Title">
-            Making Possibilities Happen in a
-Place That Feels Like <span class="font-[700]">Home</span>
-          </h1>
-
-          <div class="mt-8 flex gap-10 " >
-            <a href="about.html" class="btn">LEARN MORE</a>
-            <a href="services.html" class="btn">OUR SERVICES</a>
-
-          
-        
+        <div class="mt-10 border-t border-white/10 pt-6 text-center text-[10px] text-white/60">
+          2026 New Dimension Worship Center. Powered by TechChurch.io
         </div>
       </div>
-
-     
-
-    </div>
-
+    </footer>
   </div>
-</section>
-
-
-
-<!-- ----------support-section----------------->
-
-<section class="w-full py-10 md:py-15  lg:py-20 max-w-[1440px] mx-auto">
-    <div class="w-full px-2 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 lg:gap-30 ">
-<div class="w-fll md:w-[50%]"
-data-aos="fade-right"
-        data-aos-duration="1500"
->
-        <div class=" space-y-1">
-            <h4 class="text-[#FBAA06] cushycms" title="Support Heading">A Space That Feels Like Home</h4>
-            <h2 class="cushycms" title="support Title">Experience the Difference
-of Truly Personalized Support</h2>
-<p class="cushycms" title="Support Description">We believe in a personalized therapeutic approach, addressing the unique needs of everyone in our community. Our goal is to create a safe, caring, and homelike environment. We achieve this by taking the time to understand each participant’s preferences, ensuring our space truly feels like “home.”
-</p>
-</div>
-<div class="mt-8 " >
-<a href="services.html" class="btn ">Our Services</a>
-</div>
-        </div>
-
-        <div class="w-full md:w-[50%] "
-        data-aos="fade-left"
-        data-aos-duration="1500">
-            <img src="assets/images/our-services.png" alt="our services" class="cushycms" title="Support-Image">
-
-        </div>
-
-    </div>
-</section>
-
-<!-- -------------video-section------------------>
-
-<section class="w-full py-10 md:py-15 lg:py-20 px-6 md:px-12 lg:px-17 max-w-[1440px] mx-auto">
-  <div class="relative w-full aspect-[21/10] mx-auto  overflow-hidden">
-
-    <!-- Thumbnail -->
-    <img 
-      id="videoThumbnail"
-      src="assets/images/video-thumbnail.png"
-      alt="Video Thumbnail"
-      class="absolute inset-0 w-full h-full object-cover z-10  "
-    />
-
-    <!-- Video -->
-    <video 
-      id="customVideo"
-      class="w-full h-full absolute inset-0 object-cover cursor-pointer "
-      loop
-    >
-      <source src="assets/aimed.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Play Button -->
-    <button
-      id="playBtn"
-      class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer "
-    >
-      <div class="w-20 h-20 flex items-center justify-center">
-        <img src="assets/images/play-btn.png" alt="play icon" >
-      </div>
-    </button>
-
-  </div>
-</section>
-
-
-
-<!-- ----------------our-services---------------------->
-
-<section class=" funds w-full py-10 md:py-15  lg:py-20 bg-[#F2F2F2]">
-    
-    <div class="w-full px-2 md:px-12 mx-auto  max-w-[1440px] mx-auto">
-<div class="space-y-3 text-center" 
-data-aos="zoom-in"
-        data-aos-duration="1500"
->
-    <h4 class="cushycms" title="Services Heading">Our Services</h4>
-    <h2 class="cushycms" title="Services Title">Tailored Solutions for Every Individual We Serve</h2>
-</div>
-
-<div>
-
-    <div class="flex flex-wrap justify-center gap-10 max-w-[1100px] mx-auto mt-20"
-     data-aos="zoom-in"
-     data-aos-duration="2000">
-
-    <div class="fund-card relative w-full max-w-[300px] cushycms" title="Services Card">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="assets/images/24_hour_.png" 
-                 alt="residential" 
-                 class="card-image cushycms" title="Card Image">
-        </div>
-        <a href="services.html#t4hours_residential_services" target="_blank">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h3 class="heading cushycms" title="Card Title">24 Hour Residential</h3>
-            </div>
-        </a>
-    </div>
-
-    <div class="fund-card relative w-full max-w-[300px] cushycms" title="Services Card">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="assets/images/supportive.png" 
-                 alt="supportive-living-services" 
-                 class="card-image cushycms" title="Card Image">
-        </div>
-        <a href="services.html#supportive_living_services" target="_blank">
-            <div class="absolute inset-0 flex items-center justify-center text-center">
-                <h3 class="heading cushycms" title="Card Title">Supportive Living Services</h3>
-            </div>
-        </a>
-    </div>
-
-    <div class="fund-card relative w-full max-w-[300px] cushycms" title="Services Card">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="assets/images/clinical-support.png" 
-                 alt="Clinical-supportive-services" 
-                 class="card-image cushycms" title="Card Image">
-        </div>
-        <a href="services.html#clinical_support_services" target="_blank">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h3 class="heading cushycms" title="Card Title">Clinical Support Services</h3>
-            </div>
-        </a>
-    </div>
-
-    <div class="fund-card relative w-full max-w-[300px] cushycms" title="Services Card">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="assets/images/home_and_community.png" 
-                 alt="Home-and-comunity" 
-                 class="card-image cushycms" title="Card Image">
-        </div>
-        <a href="services.html#home_community_services" target="_blank">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h3 class="heading cushycms" title="Card Title">Home and Community Services</h3>
-            </div>
-        </a>
-    </div>
-
-    <div class="fund-card relative w-full max-w-[300px] cushycms" title="Services Card">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="assets/images/community_support.png" 
-                 alt="community-supportive" 
-                 class="card-image cushycms" title="Card Image">
-        </div>
-        <a href="services.html#community_support_services" target="_blank">
-            <div class="absolute inset-0 flex items-center justify-center text-center">
-                <h3 class="heading cushycms" title="Card Title">Community Support Services</h3>
-            </div>
-        </a>
-    </div>
-
-    <div class="fund-card relative w-full max-w-[300px] cushycms" title="Services Card">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="assets/images/AIMED-to-independence.png" 
-                 alt="AIMED-to-independence" 
-                 class="card-image cushycms" title="Card Image">
-        </div>
-        <a href="services.html#aimed_to_independence" target="_blank">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h3 class="heading cushycms" title="Card Title">AIMED to Independence (CYF)</h3>
-            </div>
-        </a>
-    </div>
-
-</div>
-
-
-</div>
-
-</div>
-</section>
-
-<!-- --------join-team--------------->
-
-<section class="w-full py-10 md:py-15  lg:py-20 max-w-[1440px] mx-auto">
-    <div class="w-full px-2 md:px-12 mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20 lg:gap-30 ">
-
-
-        <div class="w-full md:w-[50%] " 
-        data-aos="fade-right"
-        data-aos-duration="1500"
-        >
-            <img src="assets/images/join-team.png" alt="our services" class="cushycms" title="Join Team Image">
-
-        </div>
-
-        <div class="w-full md:w-[50%]" data-aos="fade-left" data-aos-duration="1500">
-        <div class=" space-y-1">
-            <h4 class="text-[#FBAA06] cushycms" title="Section Heading">Together, We Make Care Personal</h4>
-            <h2 class="cushycms" title="Section Title">Join a Team That<br>
-Cares as Much as You Do</h2>
-<p class="cushycms" title="Section Content">At AIMED, we believe great care starts with great people. We’re always looking for dedicated, compassionate professionals who share our commitment to excellence and individualized support. Join a team that values growth, collaboration, and purpose in
-every role.
-</p>
-</div>
-<div class="mt-8 " >
-<a href="jobs.html" class="btn ">Apply Today</a>
-</div>
-        </div>
-
-    </div>
-</section>
-
-
-
-<!-- ------Upcoming Events---------- -->
-
-  <section class="   mt-10 bg-[#f7f7f7]">
-    <div class=" max-w-[1440px] mx-auto  px-4 md:px-6 lg:px-12 py-10 md:py-15 lg:py-20">
-    <div class=" text-center py-8 rounded-3xl"  data-aos="fade-up" data-aos-duration="1000">
-  <h2 class="large-heading  font-bold cushycms" title="Section Title"> Upcoming Events</h2>
- 
- </div>
-
-
- <div class="py-12 space-y-10">
- <!-- ---------1---------- -->
-
-    <div class="border border-[#707070] rounded-3xl pt-15 pb-5 px-4 md:px-9 lg:px-18  "  data-aos="fade-left" data-aos-duration="1000">
-  
-      <div class="flex flex-col md:flex-row justify-center items-center    gap-10 ">
-         <h3 class="text-[#707070] pb-10 font-medium cushycms" title="Event Title">Stay Tuned For More Upcoming Events</h3>
-      <!-- <div class="flex items-center mt-5 md:mt-0" >
-        
-        <div class=" ">
-               <h3 class="font-medium">Teaching Hearts Fundraiser</h3>
-        </div>
-      </div>
-
-      <div class="flex items-center " >
-      
-        <div class="flex flex-col font-bold">
-            <p>March</p>
-            <p>28</p>
-        </div>
-      </div>
-
-      <div class="flex items-center" >
-      
-        <div class="flex flex-col font-bold items-center">
-            <p>100 Churchill Road
-</p>
-            <p>Pittsburg, PA 15235</p>
-        </div>
-      </div>
-<div class="flex items-center">
-            <a href="about.html" class="large-btn learn-more-btn">Learn more</a>
-            </div> -->
-      <!-- </div> -->
-<!-- Expandable Content -->
-<!-- <div class="event-content overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out mt-10">
-  <div class="flex flex-col md:flex-row justify-center">
-    
-    <div class="md:w-[50%] md:pr-10 lg:pr-26">
-      <p>
-        Join us for a special fundraising gathering hosted by AIMED Human Services on Saturday, March 28, 2026, from 11:00 AM to 2:00 PM at the beautiful Englewood Country Club in Pittsburgh, PA. This event will be a wonderful opportunity to connect with the community, support an important cause, and learn more about the work AIMED Human Services is doing to make a difference. Tickets are $50, and all proceeds support the organization’s mission and programs.
-      </p>
-
-      <div class="mt-3 md:mt-8">
-        <a href="#" class="large-btn">GET TICKETS</a>
-      </div>
-    </div>
-
-    <div class="md:w-[50%] flex justify-center items-center gap-4 mt-10 md:mt-0">
-      <img src="assets/images/AIMED - INVITE _ SIDE A.png" alt="aimed invite">
-      <img src="assets/images/AIMED - INVITE _ SIDE B.png" alt="aimed invite">
-    </div>
-
-  </div>
-</div> -->
-    </div>
-
- 
-
-   
-
-</div>
-</div>
-</section>
-
-
-
-<!-- --------------call-to-action-------------->
-
-<section class="w-full py-20 md:py-30 lg:py-40 relative overflow-hidden">
-
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-        <img src="assets/images/call-to-action.png" 
-             alt="hero-image" 
-             class="w-full h-full object-cover object-top cushycms" title="Call to Action Background">
-    </div>
-
-    <!-- Yellow Overlay -->
-    <div class="absolute inset-0 bg-[#DF6600]/90 z-10"></div>
-
-    <!-- Text Content -->
-    <div class="relative z-10 w-full px-2 md:px-12 max-w-[1440px] mx-auto 
-                flex flex-col text-center justify-center" 
-                data-aos="zoom-in"
-        data-aos-duration="1500"
-                >
-        
-        <h3 class="text-white cushycms" title="Call to Action Title">Get Started with <span class="font-[700]">AIMED</span> today!</h3>
-<div class="mt-2 cushycms" title="Call to Action Button">
-        <a href="services.html" class="white-btn">GET STARTED</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- --------------footer------------->
-
- <!-- Footer -->
-<footer class="bg-[#f7f7f7] py-12 medium-text  ">
-  <div class="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-12">
-  <div class="w-full  mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10">
-    
-    <!-- Description -->
-    <div class="md:col-span-2 space-y-3">
-      <p class="heading ">ABOUT US</p>
-      <p class="footer-text mt-3">
-        We believe in a personalized therapeutic approach, addressing the unique needs of everyone in our community. Our goal is to create a safe, caring, and homelike environment. We achieve this by taking the time to understand each participant’s preferences, ensuring our space truly feels like “home.”
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div>
-      <p class="heading ">QUICK LINKS</p>
-<ul class="space-y-1 text-sm  text-black mt-3">
-        <li><a href="index.html" class="footer-link">Home</a></li>
-        <li><a href="about.html" class="footer-link">About</a></li>
-        <li><a href="services.html" class="footer-link">Services</a></li>
-        <li><a href="jobs.html" class="footer-link">Jobs</a></li>
-        <li><a href="contact-us.html" class="footer-link">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div>
-      <p class=" heading">SERVICES</p>
-      <ul class="space-y-1 text-sm   text-black mt-3">
-        <li><a href="services.html#t4hours_residential_services" class="footer-link">24-hour Residential Services</a></li>
-        <li><a href="services.html#supportive_living_services" class="footer-link">Supportive Living Services</a></li>
-        <li><a href="services.html#clinical_support_services" class="footer-link">Clinical Support Services</a></li>
-        <li><a href="services.html#home_community_services" class="footer-link">Home and Community Services</a></li>
-        <li><a href="services.html#community_support_services" class="footer-link">Community Support Services</a></li>
-        <li><a href="services.html#aimed_to_independence" class="footer-link">AIMED to Independence (CYF)</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div>
-      <p class=" heading">CONTACT US</p>
-      <p class=" footer-text mt-3">
-        <span class="font-bold ">Pittsburg</span><br>
-     <p>  3301 McCrady Road
-Pittsburgh, PA  15235</p>
-<p>Tel: 412-704-5067</p>
-
-      </p>
-
-      <p class=" footer-text mt-3 ">
-        <span class="font-bold ">York</span><br>
-     <p> 2793 S. Queen Street
-York, PA  17313
-</p>
-<p>Tel: 717-356-2410</p>
-
-      </p>
-    </div>
-  </div>
-  <!-----------footer-logo------------->
-  <div class="footer-logo py-4">
-    <img src="assets/images/Image 1.svg" alt="Aimed logo" class="footer-logo">
-  </div>
-
-
-  <div class="flex flex-col md:flex-row justify-between mt-10">
-    <div class="[&_a]:underline flex flex-col ">
-        <a href="#" class="hover:text-[#FBAA06]">Privacy Policy</a>
-        <a href="#" class="hover:text-[#FBAA06]">Terms of Use</a>
-    </div>
-
-  <!-- Copyright -->
-  <div class="copyright-text mt-2 md:mt-0 ">
-   Copyright © 2026 TechChurch.io. All Rights Reserved.
-  </div>
-  </div>
-  </div>
-</footer>
 
 
   <script src="assets/script.js" ></script>
