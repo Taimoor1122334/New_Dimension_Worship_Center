@@ -77,14 +77,30 @@ document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
 // Navbar Fixed on Scroll
 window.addEventListener('scroll', function () {
   const navbar = document.getElementById('mainNavbar');
+  const header = navbar ? navbar.closest('header') : null;
   if (!navbar) return;
-  const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  if (scrollPercentage > 10) {
-    navbar.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'animate__animated', 'animate__fadeInDown');
+
+  // Use a fixed scroll threshold instead of percentage for consistency across pages
+  const scrollThreshold = 300; // pixels from top
+
+  if (window.scrollY > scrollThreshold) {
+    navbar.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'z-50', 'animate__animated', 'animate__fadeInDown');
     navbar.classList.remove('relative');
+
+    // Add padding-top to header to prevent content shift
+    if (header) {
+      // Use a fixed height or calculate navbar height more reliably
+      const navbarHeight = navbar.offsetHeight || 80; // fallback to 80px if calculation fails
+      header.style.paddingTop = navbarHeight + 'px';
+    }
   } else {
-    navbar.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'animate__animated', 'animate__fadeInDown');
+    navbar.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'z-50', 'animate__animated', 'animate__fadeInDown');
     navbar.classList.add('relative');
+
+    // Remove padding-top when navbar returns to relative
+    if (header) {
+      header.style.paddingTop = '0px';
+    }
   }
 });
 
