@@ -122,6 +122,51 @@ document.querySelectorAll('.dropdown-container').forEach(container => {
     
 });
 
+// Auto-open details elements when menu links are clicked
+const ministryIds = ['#men-ministry', '#women-ministry', '#young-adult', '#childeren-youth', '#marriage-ministry'];
+document.querySelectorAll('.dropdown-menu a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    // Check if link points to a details element on the current page or ministries page
+    if (href && ministryIds.some(id => href.includes(id))) {
+      // Extract the ID from the href
+      const id = href.split('#')[1];
+      if (id) {
+        // Use setTimeout to ensure the page has scrolled first
+        setTimeout(() => {
+          const detailsElement = document.getElementById(id);
+          if (detailsElement && detailsElement.tagName === 'DETAILS') {
+            // Close all other details elements first
+            document.querySelectorAll('details').forEach(details => {
+              if (details !== detailsElement) {
+                details.open = false;
+              }
+            });
+            // Open the target details element
+            detailsElement.open = true;
+            // Scroll into view with smooth behavior and proper margin
+            detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
+    }
+  });
+});
+
+// Ensure only one details element is open at a time (manual toggle)
+document.querySelectorAll('details').forEach(details => {
+  details.addEventListener('toggle', function() {
+    if (this.open) {
+      // Close all other details elements when one opens
+      document.querySelectorAll('details').forEach(otherDetails => {
+        if (otherDetails !== this) {
+          otherDetails.open = false;
+        }
+      });
+    }
+  });
+});
+
 // -------video play---------------
   const video = document.getElementById("customVideo");
   const playBtn = document.getElementById("playBtn");

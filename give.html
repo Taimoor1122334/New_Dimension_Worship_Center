@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About New Dimension Worship Center">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="icon" href="assets/images/Image 1.svg" type="image/x-icon">
+  <title>About | New Dimension Worship Center</title>
+</head>
+<body class="bg-white text-black">
+  <div class="min-h-screen">
+     <!-- Hero + Navbar (matches Home.png layout) -->
+    <header class="relative overflow-hidden rounded-3xl bg-black m-5 min-h-[40vh] md:min-h-[50vh] lg:min-h-[70vh]">
+      <div class="absolute inset-0">
+        <img
+          src="assets/images/pedro-lima-HtwsbbClBOs-unsplash(Hero-image).png"
+          alt="Hero background"
+          class="h-full w-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-black/55"></div>
+      </div>
+
+      <nav id="mainNavbar" class="relative z-20">
+        <div class="mx-auto flex max-w-[1320px] items-center justify-between px-5 py-5">
+          <a href="index.html" class="flex items-center gap-2">
+            <img
+              src="assets/images/Transparent-Logo_logo.png"
+              alt="NDWC logo"
+              class="h-15 w-auto"
+            />
+          </a>
+
+          <!-- Desktop nav -->
+          <div class="hidden items-center gap-15 text-[16px] font-medium text-white lg:flex">
+            <a href="index.html" class=" hover:opacity-100 nav-link " >Home</a>
+
+            <div class="relative dropdown-container">
+              <a href="about.html" class="flex items-center nav-link gap-2  hover:opacity-100" >
+                About
+               
+              </a>
+              <div class="dropdown-menu absolute left-0 top-full mt-3 hidden w-56 rounded-xl bg-white py-2 shadow-2xl ring-1 ring-white/10">
+                <a href="about.html#about-ndwc" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">About NDWC</a>
+                <a href="about.html#our-founder" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Our Founder</a>
+                <a href="about.html#continuing-the-vision" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Continuing the Vision</a>
+                <a href="about.html#our-senior-pastor" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Our Senior Pastor</a>
+                <a href="about.html#ministerial-staff" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Ministerial Staff</a>
+                <a href="about.html#what-we-believe" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">What We Believe</a>
+              </div>
+            </div>
+
+             <div class="relative dropdown-container">
+              <a href="ministries.html" class="flex items-center nav-link gap-2  hover:opacity-100" >
+                Ministries
+               
+              </a>
+              <div class="dropdown-menu absolute left-0 top-full mt-3 hidden w-56 rounded-xl bg-white py-2 shadow-2xl ring-1 ring-white/10">
+                <a href="ministries.html#men-ministry" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Men’s Ministry</a>
+                <a href="ministries.html#women-ministry" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Women’s Ministry</a>
+                <a href="ministries.html#marriage-ministry" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Marriage Ministry </a>
+                <a href="ministries.html#childeren-youth" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Children, Youth & Teens </a>
+                <a href="ministries.html#young-adult" class="block px-4 py-2 text-black hover:text-white hover:bg-[#78580E]">Young Adults</a>
+              </div>
+            </div>
+            <a href="media.html" class=" hover:opacity-100 nav-link">Media</a>
+            <a href="contact.html" class=" hover:opacity-100 nav-link" >Contact</a>
+            <a href="give.html" class=" hover:opacity-100 nav-link"  id="active">Give</a>
+          </div>
+
+          <!-- Mobile toggle -->
+          <div class="lg:hidden">
+            <button onclick="toggleMenu()" id="menuToggleBtn" aria-label="Open menu">
+              <svg id="menuIcon" class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menuIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-black/90 px-5 py-5">
+          <nav class="flex flex-col gap-4 text-sm font-bold uppercase text-white">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="ministries.html" class="mobile-link">Ministries</a>
+            <a href="media.html" class="mobile-link">Media</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="give.html" class="mobile-link">Give</a>
+          </nav>
+        </div>
+      </nav>
+
+      <div class="relative z-10 mx-auto max-w-[1320px] px-5 pb-10 mt-30 md:mt-70">
+        <div >
+          <div class=" text-white uppercase flex items-center justify-center md:items-start md:justify-start">
+            <h1 >Giving</h1>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </header>
+
+    <main>
+      
+
+      
+
+        <section class="  p-4 md:p-5" >
+        <article class="  mx-auto px-5 py-15 max-w-[1320px]">
+          <div class="mt-2 ">
+            <div class=" text-center">
+              
+              <h2 class="mt-3">Sow Into The Kingdom</h2>
+
+      <div class="mt-8 grid grid-cols-1 gap-4 md:gap-8  lg:gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <a href="#"  class="rounded-[14px] bg-[#e9e9e9] transition-colors hover:bg-[#bbb8b8] px-6 py-10 md:py-14 text-center">
+          <img src="assets/images/givelify.png" alt="givelify logo" class="mx-auto  w-25" />
+          <h3 class="mt-3 small-h3 font-bold">New Dimension
+Worship Center</h3>
+          <p class=" small-p">
+            Give securely via Givelify
+          </p>
+          
+        </a>
+
+        <a href="#"  class="rounded-[14px] bg-[#e9e9e9] transition-colors hover:bg-[#bbb8b8] px-6 py-10 md:py-14 text-center">
+          <img src="assets/images/zelle.png" alt="zelle logo" class="mx-auto  w-30" />
+          <h3 class="mt-3 small-h3 font-bold">New Dimension
+Worship Center <br>
+301-228-2277</h3>
+          <p class=" small-p">
+            Give via Zelle in your banking app
+          </p>
+          
+        </a>
+
+         <a href="#" class="rounded-[14px] bg-[#e9e9e9]  transition-colors hover:bg-[#bbb8b8] px-6 py-10 md:py-14 text-center ">
+          <img src="assets/images/by-mail.png" alt="by mail logo" class="mx-auto  w-45" />
+          <h3 class="mt-3 small-h3 font-bold">New Dimension
+Worship Center</h3>
+          <p class=" small-p">
+            7820B Wormans Mill Road #273, Frederick, MD  21703 
+          </p>
+          
+        </a>
+
+      </div>
+    
+              
+
+              
+            </div>
+           
+          </div>
+         
+        </article>
+    </section>
+
+   
+
+       
+
+        
+
+      
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="mx-auto max-w-[1320px] px-5 py-10">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-7">
+          <div class="md:col-span-3">
+            <img src="assets/images/Transparent-Logo_logo.png" alt="NDWC Logo" class="h-16 w-auto">
+            <p class="footer-p mt-4">
+              At NDWC, we believe in making, equipping, and empowering disciples through the teaching of God’s Word and the operation of ministry gifts.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-p">QUICK LINKS</p>
+            <ul class="mt-3 space-y-1">
+              <li><a class="footer-link" href="index.html">Home</a></li>
+              <li><a class="footer-link" href="about.html">About</a></li>
+              <li><a class="footer-link" href="ministries.html">Ministries</a></li>
+              <li><a class="footer-link" href="media.html">Media</a></li>
+              <li><a class="footer-link" href="contact.html">Contact</a></li>
+              <li><a class="footer-link" href="give.html">Give</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-p">WHO WE ARE</p>
+            <ul class="mt-3 space-y-1">
+              <li><a class="footer-link" href="about.html#about-ndwc">About NDWC</a></li>
+              <li><a class="footer-link" href="about.html#our-founder">Our Founder</a></li>
+              <li><a class="footer-link" href="about.html#continuing-the-vision">Continuing the Vision</a></li>
+              <li><a class="footer-link" href="about.html#our-senior-pastor">Our Senior Pastor</a></li>
+              <li><a class="footer-link" href="about.html#ministerial-staff">Ministerial Staff</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-2">
+            <p class="footer-p">CONTACT US</p>
+            <p class="footer-p mt-3">
+              7450 New Technology Way, Suite C,<br>
+              Frederick, Maryland 21703
+            </p>
+            <p class="footer-p mt-2">Tel: 302-302-2277</p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-right">
+          <p class="footer-p">2026 New Dimension Worship Center. Powered by <a href="#" class="underline hover:text-[#78580E]">TechChurch.io</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

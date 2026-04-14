@@ -19,15 +19,17 @@
 html{
   scroll-behavior: smooth;
 }
-#t4hours_emergency_services,
-#supportive_living_services,
-#clinical_support_services,
-#home_community_services,
-#community_outreach_services,
-#aimed_to_independence,
-#about-aimed,
-#word-from-ceo,
-#volunteer  {
+#men-ministry,
+#women-ministry,
+#young-adult,
+#childeren-youth,
+#marriage-ministry,
+#about-ndwc,
+#our-founder,
+#continuing-the-vision,
+#our-senior-pastor,
+#ministerial-staff,
+#what-we-believe {
   scroll-margin-top: 150px; 
 }
 
@@ -258,9 +260,17 @@ nav .nav-link:focus-visible::after {
 }
 
 @media (max-width:768px){
-    #about-aimed,
-#word-from-ceo,
-#volunteer  {
+  #men-ministry,
+#women-mnistry,
+#young-adult,
+#childeren-youth,
+#marriage-ministry,
+    #about-ndwc,
+#our-founder,
+#continuing-the-vision,
+#our-senior-pastor,
+#ministriol-staff,
+#what-we-believe {
   scroll-margin-top: 80px; 
 }
 }
