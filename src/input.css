@@ -115,16 +115,47 @@ body {
     .footer-logo{
         @apply max-w-[53]
     }
-    .btn{
-         font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+   .btn {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
-        @apply text-[13px] md:text-[15px]  bg-[#78580E] py-4 px-7 rounded-full text-white hover:bg-[#6c4f0b]
-    }
+
+  @apply text-[13px] md:text-[15px] py-4 px-7 rounded-full text-white;
+
+  background: linear-gradient(90deg, #3C2C07 0%,  #78580E 100%);
+
+  &:hover {
+    background: linear-gradient(90deg, #6c4f0b 0%, #3C2C07 100%);
+  }
+}
+
+  .large-btn {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 700;
+
+  @apply text-[15px] md:text-[18px] py-4 px-10 rounded-full text-white;
+
+  background: linear-gradient(90deg, #3C2C07 0%,  #78580E 100%);
+
+  &:hover {
+    background: linear-gradient(90deg, #6c4f0b 0%, #3C2C07 100%);
+  }
+}
     .transparent-btn{
-         font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
-        @apply text-[13px] md:text-[15px] py-4 px-7 rounded-full text-white hover:text-[#78580E]
-   }
+
+  @apply text-[13px] md:text-[15px] py-4 px-7 rounded-full text-white;
+
+  background: linear-gradient(90deg,  #341A53 0%,  #6834A5 100%);
+
+  &:hover {
+    background: linear-gradient(90deg, #6834A5 0%, #341A53 100%);
+  }
+}
+
+.purple-heading{
+  color: #6834A5;
+}
   
 
 nav .nav-link{

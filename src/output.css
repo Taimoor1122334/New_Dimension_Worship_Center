@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -228,9 +227,6 @@
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
-  .-mt-12 {
-    margin-top: calc(var(--spacing) * -12);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -257,6 +253,9 @@
   }
   .mt-30 {
     margin-top: calc(var(--spacing) * 30);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
   }
   .block {
     display: block;
@@ -336,6 +335,12 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
+  }
   .w-25 {
     width: calc(var(--spacing) * 25);
   }
@@ -360,14 +365,8 @@
   .max-w-\[40\%\] {
     max-width: 40%;
   }
-  .max-w-\[40\] {
-    max-width: 40;
-  }
   .max-w-\[60\%\] {
     max-width: 60%;
-  }
-  .max-w-\[60\] {
-    max-width: 60;
   }
   .max-w-\[100\%\] {
     max-width: 100%;
@@ -389,22 +388,6 @@
   }
   .border-collapse {
     border-collapse: collapse;
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-2 {
-    --tw-translate-y: calc(var(--spacing) * -2);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-4 {
-    --tw-translate-y: calc(var(--spacing) * -4);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-4 {
-    --tw-translate-y: calc(var(--spacing) * 4);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .scale-y-0 {
     --tw-scale-y: 0%;
@@ -562,18 +545,6 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-black\/55 {
-    background-color: color-mix(in srgb, #000 55%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 55%, transparent);
-    }
-  }
-  .bg-black\/70 {
-    background-color: color-mix(in srgb, #000 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
-    }
-  }
   .bg-black\/90 {
     background-color: color-mix(in srgb, #000 90%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -583,23 +554,11 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .object-contain {
-    object-fit: contain;
+  .bg-\[linear-gradient\(1deg\,rgba\(104\,52\,165\,1\)_0\%\,rgba\(0\,0\,0\,0\.96\)_94\%\)\] {
+    background-image: linear-gradient(1deg,rgba(104,52,165,1) 0%,rgba(0,0,0,0.96) 94%);
   }
   .object-cover {
     object-fit: cover;
-  }
-  .object-\[10\%_50\%\] {
-    object-position: 10% 50%;
-  }
-  .object-\[30\%_10\%\] {
-    object-position: 30% 10%;
-  }
-  .object-\[30\%_50\%\] {
-    object-position: 30% 50%;
-  }
-  .object-\[50\%_10\%\] {
-    object-position: 50% 10%;
   }
   .object-\[50\%_20\%\] {
     object-position: 50% 20%;
@@ -612,9 +571,6 @@
   }
   .object-center {
     object-position: center;
-  }
-  .object-top {
-    object-position: top;
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -667,6 +623,9 @@
   .pt-\[33vh\] {
     padding-top: 33vh;
   }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
+  }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
@@ -678,9 +637,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-left {
-    text-align: left;
   }
   .text-right {
     text-align: right;
@@ -842,9 +798,9 @@
       margin-top: calc(var(--spacing) * 70);
     }
   }
-  .md\:flex {
+  .md\:mb-6 {
     @media (width >= 48rem) {
-      display: flex;
+      margin-bottom: calc(var(--spacing) * 6);
     }
   }
   .md\:h-10 {
@@ -865,6 +821,11 @@
   .md\:w-10 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:w-15 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 15);
     }
   }
   .md\:w-\[40\%\] {
@@ -950,11 +911,6 @@
   .md\:gap-14 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 14);
-    }
-  }
-  .md\:gap-15 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 15);
     }
   }
   .md\:gap-20 {
@@ -1139,18 +1095,32 @@ body {
     font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     font-weight: 700;
     border-radius: calc(infinity * 1px);
-    background-color: #78580E;
     padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 4);
     font-size: 13px;
     color: var(--color-white);
-    &:hover {
-      @media (hover: hover) {
-        background-color: #6c4f0b;
-      }
-    }
     @media (width >= 48rem) {
       font-size: 15px;
+    }
+    background: linear-gradient(90deg, #3C2C07 0%, #78580E 100%);
+    &:hover {
+      background: linear-gradient(90deg, #6c4f0b 0%, #3C2C07 100%);
+    }
+  }
+  .large-btn {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 700;
+    border-radius: calc(infinity * 1px);
+    padding-inline: calc(var(--spacing) * 10);
+    padding-block: calc(var(--spacing) * 4);
+    font-size: 15px;
+    color: var(--color-white);
+    @media (width >= 48rem) {
+      font-size: 18px;
+    }
+    background: linear-gradient(90deg, #3C2C07 0%, #78580E 100%);
+    &:hover {
+      background: linear-gradient(90deg, #6c4f0b 0%, #3C2C07 100%);
     }
   }
   .transparent-btn {
@@ -1161,14 +1131,16 @@ body {
     padding-block: calc(var(--spacing) * 4);
     font-size: 13px;
     color: var(--color-white);
-    &:hover {
-      @media (hover: hover) {
-        color: #78580E;
-      }
-    }
     @media (width >= 48rem) {
       font-size: 15px;
     }
+    background: linear-gradient(90deg, #341A53 0%, #6834A5 100%);
+    &:hover {
+      background: linear-gradient(90deg, #6834A5 0%, #341A53 100%);
+    }
+  }
+  .purple-heading {
+    color: #6834A5;
   }
   nav .nav-link {
     font-weight: 500;
@@ -1296,21 +1268,6 @@ nav .nav-link:hover::after, nav .nav-link:focus-visible::after {
   #men-ministry, #women-mnistry, #young-adult, #childeren-youth, #marriage-ministry, #about-ndwc, #our-founder, #continuing-the-vision, #our-senior-pastor, #ministriol-staff, #what-we-believe {
     scroll-margin-top: 80px;
   }
-}
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
 }
 @property --tw-scale-x {
   syntax: "*";
@@ -1478,9 +1435,6 @@ nav .nav-link:hover::after, nav .nav-link:focus-visible::after {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
