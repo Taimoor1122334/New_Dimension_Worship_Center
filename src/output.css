@@ -224,6 +224,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
@@ -459,6 +462,9 @@
   }
   .gap-15 {
     gap: calc(var(--spacing) * 15);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
   }
   .space-y-1 {
     :where(& > :not(:last-child)) {
@@ -791,6 +797,11 @@
       grid-column: span 3 / span 3;
     }
   }
+  .md\:my-0 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 0);
+    }
+  }
   .md\:mt-5 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 5);
@@ -849,6 +860,16 @@
   .md\:max-w-\[35\%\] {
     @media (width >= 48rem) {
       max-width: 35%;
+    }
+  }
+  .md\:max-w-\[40\%\] {
+    @media (width >= 48rem) {
+      max-width: 40%;
+    }
+  }
+  .md\:max-w-\[60\%\] {
+    @media (width >= 48rem) {
+      max-width: 60%;
     }
   }
   .md\:max-w-\[65\%\] {
@@ -944,6 +965,16 @@
   .md\:py-14 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:py-15 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 15);
+    }
+  }
+  .md\:py-20 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
     }
   }
   .md\:pt-\[43vh\] {
