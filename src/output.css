@@ -707,6 +707,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .group-open\:rotate-0 {
+    &:is(:where(.group):is([open], :popover-open, :open) *) {
+      rotate: 0deg;
+    }
+  }
   .group-open\:rotate-180 {
     &:is(:where(.group):is([open], :popover-open, :open) *) {
       rotate: 180deg;
