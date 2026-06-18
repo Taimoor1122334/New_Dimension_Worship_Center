@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-black: #000;
     --color-white: #fff;
@@ -195,9 +194,6 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .-top-5 {
-    top: calc(var(--spacing) * -5);
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -210,12 +206,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .left-1\/2 {
-    left: calc(1/2 * 100%);
-  }
-  .z-0 {
-    z-index: 0;
-  }
   .z-10 {
     z-index: 10;
   }
@@ -225,9 +215,6 @@
   .z-50 {
     z-index: 50;
   }
-  .z-\[-1\] {
-    z-index: -1;
-  }
   .float-end {
     float: inline-end;
   }
@@ -236,9 +223,6 @@
   }
   .mx-auto {
     margin-inline: auto;
-  }
-  .my-10 {
-    margin-block: calc(var(--spacing) * 10);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -402,14 +386,6 @@
   .grow {
     flex-grow: 1;
   }
-  .-translate-x-1\/2 {
-    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .scale-y-0 {
     --tw-scale-y: 0%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
@@ -423,9 +399,6 @@
   }
   .rotate-180 {
     rotate: 180deg;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -743,31 +716,10 @@
       rotate: 180deg;
     }
   }
-  .hover\:bg-\[\#78580E\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #78580E;
-      }
-    }
-  }
-  .hover\:bg-\[\#bbb8b8\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #bbb8b8;
-      }
-    }
-  }
   .hover\:text-\[\#78580E\] {
     &:hover {
       @media (hover: hover) {
         color: #78580E;
-      }
-    }
-  }
-  .hover\:text-white {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-white);
       }
     }
   }
@@ -906,11 +858,6 @@
   .md\:max-w-\[67\%\] {
     @media (width >= 48rem) {
       max-width: 67%;
-    }
-  }
-  .md\:max-w-\[80\%\] {
-    @media (width >= 48rem) {
-      max-width: 80%;
     }
   }
   .md\:max-w-\[82\%\] {
@@ -1147,7 +1094,7 @@
 html {
   scroll-behavior: smooth;
 }
-#men-ministry, #women-ministry, #young-adult, #childeren-youth, #marriage-ministry, #about-ndwc, #our-founder, #continuing-the-vision, #our-senior-pastor, #ministerial-staff, #what-we-believe {
+#men-ministry, #women-ministry, #young-adult, #childeren-youth, #marriage-ministry, #about-ndwc, #our-founder, #continuing-the-vision, #our-senior-pastor, #what-we-believe {
   scroll-margin-top: 150px;
 }
 body {
@@ -1405,21 +1352,6 @@ nav .nav-link:hover::after, nav .nav-link:focus-visible::after {
     scroll-margin-top: 80px;
   }
 }
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -1434,26 +1366,6 @@ nav .nav-link:hover::after, nav .nav-link:focus-visible::after {
   syntax: "*";
   inherits: false;
   initial-value: 1;
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -1545,17 +1457,9 @@ nav .nav-link:hover::after, nav .nav-link:focus-visible::after {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
