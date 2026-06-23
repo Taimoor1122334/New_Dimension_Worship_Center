@@ -14,7 +14,7 @@ Place That Feels Like">
 <body>
   <div class="min-h-screen bg-white text-black">
     <!-- Hero + Navbar (matches Home.png layout) -->
-    <header class="relative overflow-hidden rounded-3xl bg-black m-5 min-h-[100vh]">
+    <header class="relative overflow-hidden rounded-3xl bg-black m-5 md:min-h-[100vh]">
       <div class="absolute inset-0">
         <img
           src="assets/images/home-hero-bg.png"
@@ -85,52 +85,66 @@ Place That Feels Like">
           </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-black/90 px-5 py-5">
-          <nav class="flex flex-col gap-4 text-sm font-bold uppercase text-white">
-            <a href="index.html" class="mobile-link">Home</a>
-            
-            <div>
-              <button class="mobile-dropdown-toggle flex items-center justify-between w-full text-left hover:opacity-80">About
-                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
-              </button>
-              <div class="mobile-submenu overflow-hidden" style="max-height: 0px;">
-                <a href="about.html#about-ndwc" class="mobile-link block pl-4 py-2">About NDWC</a>
-                <a href="about.html#our-founder" class="mobile-link block pl-4 py-2">Our Founder</a>
-                <a href="about.html#continuing-the-vision" class="mobile-link block pl-4 py-2">Continuing the Vision</a>
-                <a href="about.html#our-senior-pastor" class="mobile-link block pl-4 py-2">Our Senior Pastor</a>
-                <a href="about.html#ministerial-staff" class="mobile-link block pl-4 py-2">Leadership Staff</a>
-                <a href="about.html#what-we-believe" class="mobile-link block pl-4 py-2">What We Believe</a>
-              </div>
-            </div>
-            
-            <div>
-              <button class="mobile-dropdown-toggle flex items-center justify-between w-full text-left hover:opacity-80">Ministries
-                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
-              </button>
-              <div class="mobile-submenu overflow-hidden" style="max-height: 0px;">
-                <a href="ministries.html#ministry-structure" class="mobile-link block pl-4 py-2">Ministry Structure</a>
-                <a href="ministries.html#how-we-serve" class="mobile-link block pl-4 py-2">How We Serve</a>
-                <a href="ministries.html#marriage-ministry" class="mobile-link block pl-4 py-2">Marriage Ministry</a>
-                <a href="ministries.html#men-ministry" class="mobile-link block pl-4 py-2">Men's Ministry</a>
-                <a href="ministries.html#women-ministry" class="mobile-link block pl-4 py-2">Women's Ministry</a>
-                <a href="ministries.html#childeren-youth" class="mobile-link block pl-4 py-2">Children, Youth & Teens</a>
-                <a href="ministries.html#young-adult" class="mobile-link block pl-4 py-2">Young Adults</a>
-              </div>
-            </div>
-            
-            <a href="media.html" class="mobile-link">Media</a>
-            <a href="contact.html" class="mobile-link">Contact</a>
-            <a href="give.html" class="mobile-link">Give</a>
-          </nav>
-        </div>
       </nav>
 
-      <div class="relative z-10 mx-auto max-w-[1380px] px-5 pb-10 pt-[33vh] md:pt-[43vh] lg:pt-[54vh]">
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="lg:hidden hidden fixed inset-0 z-[9999] bg-black/90 px-5 py-5 overflow-y-auto">
+        <div class="flex justify-end mb-4">
+          <button onclick="toggleMenu()" id="closeMenuBtn" aria-label="Close menu" class="text-white hover:opacity-80">
+            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 text-sm font-bold uppercase text-white">
+          <a href="index.html" class="mobile-link">Home</a>
+          
+          <div class="mobile-dropdown-wrapper">
+            <div class="flex items-center justify-between">
+              <a href="about.html" class="mobile-link font-bold uppercase">About</a>
+              <button type="button" class="mobile-dropdown-toggle p-2 text-white hover:opacity-80" aria-label="Toggle About submenu">
+                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="mobile-submenu overflow-hidden" style="max-height: 0px;">
+              <a href="about.html#about-ndwc" class="mobile-link block pl-4 py-2">About NDWC</a>
+              <a href="about.html#our-founder" class="mobile-link block pl-4 py-2">Our Founder</a>
+              <a href="about.html#continuing-the-vision" class="mobile-link block pl-4 py-2">Continuing the Vision</a>
+              <a href="about.html#our-senior-pastor" class="mobile-link block pl-4 py-2">Our Senior Pastor</a>
+              <a href="about.html#ministerial-staff" class="mobile-link block pl-4 py-2">Leadership Staff</a>
+              <a href="about.html#what-we-believe" class="mobile-link block pl-4 py-2">What We Believe</a>
+            </div>
+          </div>
+          
+          <div class="mobile-dropdown-wrapper">
+            <div class="flex items-center justify-between">
+              <a href="ministries.html" class="mobile-link font-bold uppercase">Ministries</a>
+              <button type="button" class="mobile-dropdown-toggle p-2 text-white hover:opacity-80" aria-label="Toggle Ministries submenu">
+                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            <div class="mobile-submenu overflow-hidden" style="max-height: 0px;">
+              <a href="ministries.html#ministry-structure" class="mobile-link block pl-4 py-2">Ministry Structure</a>
+              <a href="ministries.html#how-we-serve" class="mobile-link block pl-4 py-2">How We Serve</a>
+              <a href="ministries.html#marriage-ministry" class="mobile-link block pl-4 py-2">Marriage Ministry</a>
+              <a href="ministries.html#men-ministry" class="mobile-link block pl-4 py-2">Men's Ministry</a>
+              <a href="ministries.html#women-ministry" class="mobile-link block pl-4 py-2">Women's Ministry</a>
+              <a href="ministries.html#childeren-youth" class="mobile-link block pl-4 py-2">Children, Youth & Teens</a>
+              <a href="ministries.html#young-adult" class="mobile-link block pl-4 py-2">Young Adults</a>
+            </div>
+          </div>
+          
+          <a href="media.html" class="mobile-link">Media</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+          <a href="give.html" class="mobile-link">Give</a>
+        </nav>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-[1380px] px-5 pb-10 pt-[15vh] md:pt-[43vh] lg:pt-[54vh]">
         <div class="flex  flex-col md:flex-row justify-between  gap-10 ">
           <div class=" text-white max-w-[100%] md:max-w-[67%]">
             <h3 >Welcome to <span class="font-bold"> New Dimension Worship Center </span></h3>
@@ -223,15 +237,15 @@ Place That Feels Like">
 
     <!-- Upcoming Events -->
 
-<section class="mx-auto max-w-[1250px] pt-10 px-5 pb-20 text-center">
+<section class="mx-auto max-w-[1320px] pt-10 px-5 pb-20 text-center">
   <h2 class="large-heading">Upcoming Events</h2>
 
-  <div class="mx-auto max-w-[1320px] flex flex-col md:flex-row gap-5 px-5 py-14">
+  <div class="mx-auto flex flex-col md:flex-row gap-5 px-5 py-14 ">
     <div class="img-card" onclick="openLightbox('assets/images/diaper_drive.png', 'Diaper Drive')">
       <img src="assets/images/diaper_drive.png" alt="Diaper Drive">
     </div>
-    <div class="img-card" onclick="openLightbox('assets/images/bubies.png', 'Bubies')">
-      <img src="assets/images/bubies.png" alt="Bubies">
+    <div class="img-card" onclick="openLightbox('assets/images/Rubies.png', 'Rubies')">
+      <img src="assets/images/Rubies.png" alt="Bubies">
     </div>
     <div class="img-card" onclick="openLightbox('assets/images/cookout.png', 'Cookout')">
       <img src="assets/images/cookout.png" alt="Cookout">

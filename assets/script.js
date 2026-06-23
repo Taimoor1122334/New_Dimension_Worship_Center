@@ -41,7 +41,8 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 // Mobile dropdown toggles
 document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
   toggle.addEventListener('click', () => {
-    const currentSubmenu = toggle.nextElementSibling;
+    const wrapper = toggle.closest('.mobile-dropdown-wrapper');
+    const currentSubmenu = wrapper ? wrapper.querySelector('.mobile-submenu') : null;
     if (!currentSubmenu || !currentSubmenu.classList.contains('mobile-submenu')) return;
 
     // Close other open submenus
@@ -54,6 +55,7 @@ document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
 
     // Toggle current submenu
     const isOpen = currentSubmenu.style.maxHeight && currentSubmenu.style.maxHeight !== '0px';
+    const icon = toggle.querySelector('svg');
     if (isOpen) {
       currentSubmenu.style.maxHeight = '0px';
       // hide after transition ends to avoid layout gap
@@ -61,14 +63,14 @@ document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
         currentSubmenu.classList.add('hidden');
         currentSubmenu.removeEventListener('transitionend', handle);
       });
-      toggle.querySelector('svg')?.classList.remove('rotate-180');
+      if (icon) icon.style.transform = '';
     } else {
       currentSubmenu.classList.remove('hidden');
       // Let browser compute height, then animate to content height
       requestAnimationFrame(() => {
         currentSubmenu.style.maxHeight = currentSubmenu.scrollHeight + 'px';
       });
-      toggle.querySelector('svg')?.classList.add('rotate-180');
+      if (icon) icon.style.transform = 'rotate(90deg)';
     }
   });
 });

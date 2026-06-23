@@ -351,11 +351,11 @@ nav .nav-link:focus-visible::after {
   .lightbox-inner {
     position: relative;
     max-width: 90vw;
-    max-height: 90vh;
+    max-height: 30vh;
   }
   .lightbox-inner img {
     max-width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     border-radius: 8px;
     object-fit: contain;
     display: block;
