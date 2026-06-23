@@ -212,3 +212,20 @@ document.querySelectorAll('.learn-more-btn').forEach(button => {
     this.textContent = isOpen ? 'Learn more' : 'Show less';
   });
 });
+
+
+  function openLightbox(src, alt) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxImg').alt = alt;
+    document.getElementById('lightboxOverlay').classList.add('active');
+  }
+
+  function closeLightbox(e) {
+    if (!e || e.target === document.getElementById('lightboxOverlay')) {
+      document.getElementById('lightboxOverlay').classList.remove('active');
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
