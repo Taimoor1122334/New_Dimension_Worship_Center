@@ -26,12 +26,13 @@ Place That Feels Like">
 
       <nav id="mainNavbar" class="relative z-20">
         <div class="mx-auto flex max-w-[1380px] items-center justify-between px-5 py-5">
-          <a href="index.html" class="flex items-center gap-2">
+          <a href="index.html" class="flex items-center gap-2" aria-label="Home">
             <img
               src="assets/images/Transparent-Logo_logo.png"
               alt="NDWC logo"
               class="h-15 w-auto"
             />
+            <span class="sr-only">Home</span>
           </a>
 
           <!-- Desktop nav -->
@@ -159,7 +160,7 @@ Place That Feels Like">
             Streaming via Facebook Live<br />
             New Dimension Worship Center
           </p>
-          <p class="mt-4 small-p"><span class="font-bold">Time:</span> 12:00 pm – 2:00 pm</p>
+          <p class="mt-4 small-p">Time: 12:00 pm – 2:00 pm</p>
         </div>
       </div>
     </section>
@@ -192,7 +193,22 @@ Place That Feels Like">
     <section class="mx-auto max-w-[1250px] pt-10 px-5 pb-20 text-center">
       <h2 class="large-heading">Upcoming Events</h2>
 
-      <div class=" max-w-[1280px] bg-[#DEDEDE] p-5 md:p-10 lg:p-15 mt-10 rounded-xl mx-auto">
+      <div class="mx-auto max-w-[1320px] flex flex-col md:flex-row gap-5 px-5 py-14">
+        <div class="overflow-hidden ">
+          <img src="assets/images/diaper_drive.png" alt="Diaper Drive" class="w-full h-[280px]  object-cover">
+        </div>
+        <div class="overflow-hidden ">
+          <img src="assets/images/bubies.png" alt="bubies" class="w-full h-[280px] object-cover">
+        </div>
+        <div class="overflow-hidden ">
+          <img src="assets/images/cookout.png" alt="cookout" class="w-full h-[280px] object-cover">
+        </div>
+        <div class="overflow-hidden ">
+          <img src="assets/images/speaking_engagement_day.png" alt="speaking engagement day" class="w-full h-[280px]  object-cover">
+        </div>
+      </div>
+
+      <!-- <div class=" max-w-[1280px] bg-[#DEDEDE] p-5 md:p-10 lg:p-15 mt-10 rounded-xl mx-auto">
 
         <img src="assets/images/file-icon.png" alt="Events" class="mx-auto w-15 md:w-20" />
         <h3 class="mt-5 font-bold">NDWC Men’s Prayer Breakfast</h3>
@@ -212,6 +228,7 @@ Place That Feels Like">
          
      
       </div>
+      </div> -->
     </section>
 
     <!-- Footer -->
@@ -261,7 +278,7 @@ Place That Feels Like">
                 7450 New Technology Way, Suite C,<br />
                 Frederick, Maryland 21703
               </p>
-              <p class="footer-p">Tel: 302-302-2277</p>
+              <a href="tel:301-228-2277" class="footer-p">Tel: 301-228-2277</a>
             </div>
 
            
