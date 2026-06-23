@@ -339,7 +339,7 @@ nav .nav-link:focus-visible::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 10001;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
@@ -351,21 +351,26 @@ nav .nav-link:focus-visible::after {
   .lightbox-inner {
     position: relative;
     max-width: 90vw;
-    max-height: 30vh;
+    max-height: 90vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .lightbox-inner img {
     max-width: 100%;
-    min-height: 60vh;
+    max-height: calc(100vh - 4rem);
+    height: auto;
     border-radius: 8px;
     object-fit: contain;
     display: block;
   }
   .lightbox-close {
     position: absolute;
-    top: -16px;
-    right: -16px;
-    width: 32px;
-    height: 32px;
+    top: -10px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
     background: white;
     border-radius: 50%;
     border: 1px solid #ccc;
