@@ -12,11 +12,12 @@
   <div class="min-h-screen">
      <!-- Hero + Navbar (matches Home.png layout) -->
     <header class="relative overflow-hidden rounded-3xl bg-black m-5 min-h-[40vh] md:min-h-[50vh] lg:min-h-[70vh]">
-      <div class="absolute inset-0">
+      <div class="absolute inset-0 " >
         <img
           src="assets/images/ministries-home-bg.png"
           alt="Hero background"
-          class="h-full w-full object-cover object-[50%_30%]"
+          class="h-full w-full object-cover object-[50%_30%] cushycms"
+          title="Ministries hero background"
         />
         
       </div>
@@ -146,7 +147,7 @@
       <div class="relative z-10 mx-auto max-w-[1320px] px-5 pb-10 mt-30 md:mt-70">
         <div >
           <div class=" text-white uppercase flex items-center justify-center md:items-start md:justify-start">
-            <h1 >Ministries</h1>
+            <h1  class="cushycms" title="Ministries heading">Ministries</h1>
             
           </div>
 
@@ -165,14 +166,14 @@
           <div class="mt-2 flex flex-col gap-10 md:gap-14 md:flex-row items-center md:justify-between">
             <div class="md:w-[60%] text-center">
               
-              <h2 class="mt-3">Ministry Structure</h2>
+              <h2 class="mt-3 cushycms" title="Ministry structure heading">Ministry Structure</h2>
 
-              <p class=" mt-2 leading-5">
+              <p class=" mt-2 leading-5 cushycms" title="Ministry structure description">
 We structure our ministry based upon the 5-Fold Ascension Gifts model found in Ephesians 4:11-16. Although a non-denominational church, we offer a Pentecostal/full-gospel style of worship experience. All of our teaching and preaching are based on the Bible. Additionally, we believe that we do not have blind faith, which means our faith is supported by both internal and external evidence. We believe that God has created us to be thinkers, and therefore, we use the intelligence He provides to acquire knowledge and a biblical and cultural apologetic. We foster and cultivate community, providing opportunities for our members to fellowship and grow together.
 </p>
               
             </div>
-            <div class="md:w-[40%] rounded-2xl">
+            <div class="md:w-[40%] rounded-2xl cushycms" title="Ministry structure image">
               <img src="assets/images/ministry-structure.png" alt="ministries structure" class="h-auto w-full rounded-2xl ">
             </div>
           </div>
@@ -181,21 +182,21 @@ We structure our ministry based upon the 5-Fold Ascension Gifts model found in E
     </section>
 
     <section class="m-5 bg-[linear-gradient(1deg,rgba(104,52,165,1)_0%,rgba(0,0,0,0.96)_94%)] py-20 text-center text-white rounded-2xl" id="how-we-serve">
-        <h2> How We Serve</h2>
+        <h2 class="cushycms" title="How we serve heading"> How We Serve</h2>
 
     </section>
 
       <section class="mx-auto max-w-[1200px] px-5 py-10 text-center [&_h3]:font-bold">
-        <h3 class="small-h3 purple-heading">Serve and Outreach Locally and Internationally</h3>
-        <p class=" mt-2">
+        <h3 class="small-h3 purple-heading cushycms" title="Serve and Outreach heading">Serve and Outreach Locally and Internationally</h3>
+        <p class=" mt-2 cushycms" title="Serve and Outreach description">
       We partner with local organizations and global missions to extend Christ’s love beyond our walls. Our outreach efforts are designed to meet practical needs while pointing people to Jesus.</p>
 
-        <h3 class="mt-10 small-h3 purple-heading">Spirit-Led Praise and Worship</h3>
-        <p class=" mt-2">
+        <h3 class="mt-10 small-h3 purple-heading cushycms" title="Praise and Worship heading">Spirit-Led Praise and Worship</h3>
+        <p class=" mt-2 cushycms" title="Praise and Worship description">
       Our worship gatherings are marked by freedom, joy, and a pursuit of God’s presence. Through Spirit-led praise, we encounter God and are empowered to live out our faith.</p>
 
-        <h3 class="mt-10 small-h3 purple-heading">Family-Centered Ministry</h3>
-        <p class=" mt-2">
+        <h3 class="mt-10 small-h3 purple-heading cushycms" title="Family-Centered Ministry heading">Family-Centered Ministry</h3>
+        <p class=" mt-2 cushycms" title="Family-Centered Ministry description">
       From children to adults, our ministries are designed to strengthen families and nurture a Christ-centered home life. </p>
       </section>
 
@@ -204,55 +205,56 @@ We structure our ministry based upon the 5-Fold Ascension Gifts model found in E
         
 
       <section class="mx-auto max-w-[1320px] px-5 py-20" id="what-we-believe">
-        <h2 class=" text-center">Our Ministries</h2>
-        <div class="mx-auto mt-6 space-y-6">
+        <h2 class=" text-center *:cushycms" title="Our Ministries heading">Our Ministries</h2>
+        <ul class="mx-auto mt-6 space-y-6">
           <details class="group overflow-hidden " id="marriage-ministry">
+            <li class="group overflow-hidden cushycms" id="marriage-ministry " title="Marriage Ministry">
             <summary class="flex cursor-pointer list-none items-center justify-between px-10 py-6 text-white rounded-2xl bg-[linear-gradient(1deg,rgba(0,0,0,0.96)_0%,rgba(104,52,165,1)_94%)]">
-              <h4 class="">We Are One - Marriage Ministry </h4>
+              <h4 class=" cushycms" title=" heading">We Are One - Marriage Ministry </h4>
               <img src="assets/images/white-arrow.svg" alt="toggle arrow" class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12  transition-transform group-open:rotate-180">
             </summary>
-            <p class=" bg-white  px-4 py-4">
+            <p class=" bg-white  px-4 py-4 cushycms" title=" description">
                We Are One is the Marriage Ministry of New Dimension Worship Center, dedicated to strengthening couples through Christ-centered teaching, fellowship, and prayer. Rooted in Genesis 2:24, we help husbands and wives grow in love, unity, and faith—equipping them to reflect Christ’s covenant love for the Church. Together, we strive to nurture communication, trust, and spiritual intimacy, remembering that “a cord of three strands is not quickly broken” (Ecclesiastes 4:12).  </p>
-          </details>
+            </li>
 
-          <details class="group overflow-hidden " id="men-ministry">
+          <li class="group overflow-hidden cushycms " title="Men's Ministry" id="men-ministry">
             <summary class="flex cursor-pointer list-none items-center justify-between px-10 py-6 text-white rounded-2xl bg-[linear-gradient(1deg,rgba(0,0,0,0.96)_0%,rgba(104,52,165,1)_94%)]">
-              <h4 >Men of Valor – Men’s Ministry</h4>
+              <h4 class=" cushycms" title=" heading">Men of Valor – Men’s Ministry</h4>
               <img src="assets/images/white-arrow.svg" alt="toggle arrow" class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 transition-transform group-open:rotate-180">
             </summary>
-            <p class=" bg-white px-4 py-4">
+            <p class=" bg-white px-4 py-4 cushycms" title=" description">
               Men of Valor is the Men’s Ministry of New Dimension Worship Center, committed to equipping and encouraging men to grow in faith, character, and service. Guided by Proverbs 27:17, “As iron sharpens iron, so one man sharpens another,” we gather for fellowship, discipleship, and outreach. Together, we strive to lead with integrity, humility, and Christ-like love in our homes, church, and community. </p>
-          </details>
+            </li>
 
-<details class="group overflow-hidden " id="women-ministry">
+<li class="group overflow-hidden cushycms" id="women-ministry " title="Women's Ministry">
             <summary class="flex cursor-pointer list-none items-center justify-between px-10 py-6 text-white rounded-2xl bg-[linear-gradient(1deg,rgba(0,0,0,0.96)_0%,rgba(104,52,165,1)_94%)]">
-              <h4 >RUBIES – Women’s Ministry </h4>
+              <h4 class=" cushycms" title=" heading">RUBIES – Women’s Ministry </h4>
               <img src="assets/images/white-arrow.svg" alt="toggle arrow" class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 transition-transform group-open:rotate-180">
             </summary>
-            <p class=" bg-white px-4 py-4">
+            <p class=" bg-white px-4 py-4 cushycms" title=" description">
                RUBIES (Radiant, Unique, Beautiful, Intelligent, Emerging Sisters) is the Women’s Ministry of New Dimension Worship Center, dedicated to ministering to the whole woman—spirit, soul, and body. Rooted in Ecclesiastes 4:12, we focus on Development, Fellowship, and Outreach through gatherings, Bible study, and service. Together, we shine with love, grow in faith, and walk boldly in the fullness of who God has called us to be.  </p>
-          </details>
+            </li>
 
-          <details class="group overflow-hidden " id="childeren-youth">
+          <li class="group overflow-hidden cushycms" id="childeren-youth " title="Children and Youth Ministry">
             <summary class="flex cursor-pointer list-none items-center justify-between px-10 py-6 text-white rounded-2xl bg-[linear-gradient(1deg,rgba(0,0,0,0.96)_0%,rgba(104,52,165,1)_94%)]">
-              <h4 >Kingdom Kids -  Children’s Ministry</h4>
+              <h4 class=" cushycms" title=" heading">Kingdom Kids -  Children’s Ministry</h4>
               <img src="assets/images/white-arrow.svg" alt="toggle arrow" class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 transition-transform group-open:rotate-180">
             </summary>
-            <p class=" bg-white px-4 py-4">
+            <p class=" bg-white px-4 py-4 cushycms" title=" description">
               At NDWC, we believe children are a vital part of God’s Kingdom today. Our Children’s Ministry helps kids build a strong foundation in Christ through age-appropriate Bible teaching, interactive lessons, and Spirit-led worship. In partnership with families, we nurture a love for God, encourage godly character, and empower children to live out their faith at home, school, and beyond. From God’s Little Angels Nursery (ages 2–5) to Kids of the Kingdom (ages 6–12), every child is valued, prayed for, and equipped to shine brightly for Jesus.  </p>
-          </details>
+            </li>
 
-          <details class="group overflow-hidden" id="young-adult">
+          <li class="group overflow-hidden cushycms" id="young-adult   " title="Young Adults Ministry">
             <summary class="flex cursor-pointer list-none items-center justify-between px-10 py-6 text-white  rounded-2xl bg-[linear-gradient(1deg,rgba(0,0,0,0.96)_0%,rgba(104,52,165,1)_94%)]">
-              <h4 >REVIVE - Teens and Young Adults Ministry </h4>
+              <h4 class=" cushycms " title=" heading" >REVIVE - Teens and Young Adults Ministry </h4>
               <img src="assets/images/white-arrow.svg" alt="toggle arrow" class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 transition-transform group-open:rotate-180">
             </summary>
-            <p class=" bg-white px-4 py-4">
+            <p class=" bg-white px-4 py-4 cushycms" title=" description">
                 Revive Teens and Young Adults Ministry (YAM) is a vibrant community raising world changers who stand on God’s truth and live with reverence for His Word and presence. For Teens (ages 13–18), we empower and equip a generation to pursue God wholeheartedly, discover their purpose, and embrace Kingdom living. For Young Adults (ages 19–30), we provide a foundation for building strong relationships with the Lord, living by Kingdom principles, and walking boldly in their God-given authority. Together, we are a movement of young believers committed to living with passion, purpose, and power.  </p>
-          </details>
+            </li>
 
           
-        </div>
+        </ul>
       </section>
     </main>
 
